@@ -12,7 +12,7 @@ class Player:
         self.grid_sim = [["🌊"] * 10 for _ in range(10)]
 
 
-    def grid_show(self, target, mode = "Default"):    # Fonction d'affichage de la grille de jeu. 
+    def grid_show(self, target, mode):    # Fonction d'affichage de la grille de jeu. 
         #mode = "Default" => Tableau du joueur | "Visuel" => Visualisation du tableau de l'adversaire | "Personal" => Afficher le terrain du joueur concerner
         if mode == "Visuel":    
             print(f"\n- Visuel du terrain de l'adversaire -")
@@ -22,9 +22,6 @@ class Player:
 
         elif mode == "Simulation":
             print(f"\n- Emplacement de votre bateau -\n- ❌ >>> Simulation du bateau -")
-
-        else:
-            print(f"\n        - Tableau de {self.name} -")
 
         print("   0 │1 │2 │3 │4 │5 │6 │7 │8 │9 ")
         time.sleep(0.1)
